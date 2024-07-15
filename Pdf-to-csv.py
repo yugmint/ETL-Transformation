@@ -7,7 +7,7 @@ import re
 
 st.title("ETL App")
 st.write("Import your file")
-file = st.file_uploader("Choose a PDF File")
+file = st.file_uploader("Choose a PDF File", accept_multiple_files=True)
 if file is not None:
     # Open the PDF using pypdf
     
