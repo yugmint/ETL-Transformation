@@ -91,6 +91,10 @@ if files:
         pdf_filename = file.name
         csv_filename = f"Updated_{pdf_filename}.csv"
         
+        # Generate CSV file name based on uploaded PDF file name
+        pdf_filename = file.name
+        csv_filename = f"Updated_{pdf_filename}.csv"
+        
         # Save CSV file to the same path as PDF file
         save_path = os.path.dirname(file.name)
         csv_path = os.path.join(save_path, csv_filename)
@@ -101,11 +105,3 @@ if files:
             f.write(csv_data)
 
         st.write(f"Exported the file to {csv_path}")
-
-        # Provide download link for the CSV file
-        st.download_button(
-            label="Download CSV",
-            data=csv_data,
-            file_name=csv_filename,
-            mime="text/csv"
-        )
