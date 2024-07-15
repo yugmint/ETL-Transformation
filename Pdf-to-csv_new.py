@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 import pypdf as pdf
-import pdfplumber
+import pdfplumber as plumber
 import io
 import re
 import os
